@@ -32,17 +32,25 @@
       </form>
     </div>
   </nav>
-<div id="main-content" class="container-fluid">
-  <div style="text-align:center">
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
-  </div>
-  <div class="row">
-    <div class="col-4">
-      <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
+  <div id="main-content" class="container">
+    <div class="row pt-2">
+      <div class="col">
+        <div class="card text-center">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Welcome to {{ title }}!</h5>
+            <p class="card-text">We Provide a Software Solutions for small businesses.</p>
+          </div>
+          <div class="card-footer text-muted">
+            2 days ago
+          </div>
+        </div>
+      </div>
     </div>
-      <div class="col-8">
+    <div class="row pt-2 justify-content-md-center">
+      <div class="col-6">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -80,6 +88,160 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-2">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Projects</h5>
+            <div class="row">
+              <div class="col-3">
+                <div class="card">
+                  <img class="card-img-top" src="../assets/images/ShreejiGrocersLogo.jpg" alt="Card image cap" height="100">
+                  <div class="card-body">
+                    <h5 class="card-title">Shreeji Grocers</h5>
+                    <p class="card-text">Online Grocery shopping E-commerce website.</p>
+                    <a href="#" class="btn btn-primary">View Demo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card">
+                  <img class="card-img-top" src="../assets/images/Purejoyhennabanner.jpg" alt="Card image cap" height="100">
+                  <div class="card-body">
+                    <h5 class="card-title">Pure Joy Henna</h5>
+                    <p class="card-text">Henna Tatto company in HOUSTON.</p>
+                    <a href="#" class="btn btn-primary">View Demo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card">
+                  <img class="card-img-top" src="../assets/images/ShreejiFoodLogo.png" alt="Card image cap" height="100">
+                  <div class="card-body">
+                    <h5 class="card-title">Shreeji Food</h5>
+                    <p class="card-text">Pure vegetarian food service.</p>
+                    <a href="#" class="btn btn-primary">View Demo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card">
+                  <img class="card-img-top" src="../assets/images/HMSLogo.png" alt="Card image cap" height="100">
+                  <div class="card-body">
+                    <h5 class="card-title">Hospitality Mang</h5>
+                    <p class="card-text">Hotel/Motel Management System.</p>
+                    <a href="#" class="btn btn-primary">View Demo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-2">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">About Us</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-2">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Contact Us</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <script>
+              function initMap() {
+                var chicago = new google.maps.LatLng(41.850, -87.650);
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  center: chicago,
+                  zoom: 3
+                });
+
+                var coordInfoWindow = new google.maps.InfoWindow();
+                coordInfoWindow.setContent(createInfoWindowContent(chicago, map.getZoom()));
+                coordInfoWindow.setPosition(chicago);
+                coordInfoWindow.open(map);
+
+                map.addListener('zoom_changed', function () {
+                  coordInfoWindow.setContent(createInfoWindowContent(chicago, map.getZoom()));
+                  coordInfoWindow.open(map);
+                });
+              }
+
+              var TILE_SIZE = 256;
+
+              function createInfoWindowContent(latLng, zoom) {
+                var scale = 1 << zoom;
+
+                var worldCoordinate = project(latLng);
+
+                var pixelCoordinate = new google.maps.Point(
+                  Math.floor(worldCoordinate.x * scale),
+                  Math.floor(worldCoordinate.y * scale));
+
+                var tileCoordinate = new google.maps.Point(
+                  Math.floor(worldCoordinate.x * scale / TILE_SIZE),
+                  Math.floor(worldCoordinate.y * scale / TILE_SIZE));
+
+                return [
+                  'Chicago, IL',
+                  'LatLng: ' + latLng,
+                  'Zoom level: ' + zoom,
+                  'World Coordinate: ' + worldCoordinate,
+                  'Pixel Coordinate: ' + pixelCoordinate,
+                  'Tile Coordinate: ' + tileCoordinate
+                ].join('<br>');
+              }
+
+              // The mapping between latitude, longitude and pixels is defined by the web
+              // mercator projection.
+              function project(latLng) {
+                var siny = Math.sin(latLng.lat() * Math.PI / 180);
+
+                // Truncating to 0.9999 effectively limits latitude to 89.189. This is
+                // about a third of a tile past the edge of the world tile.
+                siny = Math.min(Math.max(siny, -0.9999), 0.9999);
+
+                return new google.maps.Point(
+                  TILE_SIZE * (0.5 + latLng.lng() / 360),
+                  TILE_SIZE * (0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI)));
+              }
+            </script>
+            <div id="map"></div>
+            <!-- Replace the value of the key parameter with your own API key. -->
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZcq-Q3z2HeG-UNGxwHTVezV9L-DdApms&callback=initMap">
+            </script>
+
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
         </div>
       </div>
     </div>
