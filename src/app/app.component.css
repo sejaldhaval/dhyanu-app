@@ -29,3 +29,8 @@
 #map {
   height: 100%;
 }
+.footer-copyright {
+  color: black;
+  line-height: 32px;
+  text-align: left;
+}
