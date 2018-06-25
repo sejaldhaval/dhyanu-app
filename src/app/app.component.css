@@ -12,10 +12,7 @@
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  #navbarSupportedContent {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
+
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
