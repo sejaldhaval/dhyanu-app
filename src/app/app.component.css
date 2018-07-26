@@ -21,7 +21,7 @@
 }
 
 #main-content {
-  padding-top: 65px;
+  /*padding-top: 65px;*/
 }
 #map {
   height: 100%;
@@ -31,3 +31,25 @@
   line-height: 32px;
   text-align: left;
 }
+@-webkit-keyframes mymove {
+  from {
+    bottom: 0px;
+  }
+
+  to {
+    bottom: 600px;
+  }
+}
+
+.main-navar-scrolled {
+  background-color: #808080 !important;
+  color: white !important;
+  transition: 0.3s;
+}
+#navbarMainMenuList {
+  background-color: #ffc107 !important;
+}
+
+  #navbarMainMenuList a {
+    color: #fff !important;
+  }
